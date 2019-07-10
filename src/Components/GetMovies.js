@@ -40,8 +40,11 @@ export default class GetMovies extends React.Component {
         <br />
         <button onClick={this.fetchMovies} >New Movie</button>
         <div className="movie-container">
+          {/* Ternary statement to show multiple movies if results are in state */}
           {this.state.movieData ?
+            // If results are in state, map over the array to render MovieListItem components
             this.state.movieData.map(movie => (<MovieListItem title={movie.Title} poster={movie.Poster} />)) :
+            // If results aren't in state, just show a disappointing paragraph tag
             <p>Nothing here yet.</p>}
         </div>
       </div>

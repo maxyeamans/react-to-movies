@@ -22,32 +22,31 @@ export default class Movie extends Component {
 
   // .then() version of fetch
 
-  fetchMovie = (movie) => {
-    fetch("https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy")
-    .then( result => {
-      return result.json()
-    })
-    .then( result => {
-      this.setState({
-        title: result.Title,
-        poster: result.Poster,
-        plot: result.Plot,
-      })
-    });
-  }
+  // fetchMovie = (movie) => {
+  //   fetch("https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy")
+  //   .then( result => {
+  //     return result.json()
+  //   })
+  //   .then( result => {
+  //     this.setState({
+  //       title: result.Title,
+  //       poster: result.Poster,
+  //       plot: result.Plot,
+  //     })
+  //   });
+  // }
 
   // async/await version of fetch
 
-  // fetchMovie = async (movie) => {
-  //   const fetchResult = await fetch("https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy");
-  //   const data = await fetchResult.json();
-  //   // console.log(data.Search)
-  //   this.setState({
-  //     title: data.Title,
-  //     poster: data.Poster,
-  //     plot: data.Plot,
-  //   });
-  // }
+  fetchMovie = async (movie) => {
+    const fetchResult = await fetch("https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy");
+    const data = await fetchResult.json();
+    this.setState({
+      title: data.Title,
+      poster: data.Poster,
+      plot: data.Plot,
+    });
+  }
 
   render() {
     return (
