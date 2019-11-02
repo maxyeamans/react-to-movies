@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Movie from './Movie';
+// import Movie from './Movie';
+import MovieHook from './MovieHook';
 
 class SearchMovie extends Component {
   // Stateful components need the constructor below if receiving props
@@ -34,7 +35,7 @@ class SearchMovie extends Component {
         <br />
         <button onClick={this.changeMovie}>Search</button>
         {/* If a movie title is in state, display that movie's info. Otherwise, prompt for a movie search */}
-        { this.state.movieTitle ? <Movie title={this.state.movieTitle} /> : <p>Search for a movie.</p>}
+        { this.state.movieTitle ? <MovieHook title={this.state.movieTitle} /> : <p>Search for a movie.</p>}
       </div>
     )
   }
