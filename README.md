@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## React-to-Movies
 
-This is an app to demonstrate some cool javascript stuff: React lifecycle methods, async/await, and using mapping over an array to create components.
+This is an app I'm using to demonstrate React/general javascript stuff: React hooks, React lifecycle methods, async/await, and using map() to map over an array to create components.
 
 ### How to use this
 
